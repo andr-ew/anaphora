@@ -6,4 +6,4 @@ takes sound in, changes it, feedsback, feeds across
 
 built with max, lives in ableton
 
-[docs](anaphora1_docs.png)
+![docs](anaphora1_docs.png)
