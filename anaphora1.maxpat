@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 108.0, 79.0, 1323.0, 716.0 ],
+		"rect" : [ 505.0, 79.0, 901.0, 716.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -1239,7 +1239,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 161.7083740234375, 14.0, 150.0, 18.0 ],
+					"patching_rect" : [ 98.0, 15.0, 150.0, 18.0 ],
 					"text" : "anaphora (beta)"
 				}
 
@@ -2374,84 +2374,84 @@
 			}
 , 			{
 				"name" : "channel.maxpat",
-				"bootpath" : "~/Documents/code/anaphora-1.0",
+				"bootpath" : "~/Documents/code/anaphora1",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrns.grid.keys.maxpat",
-				"bootpath" : "~/Documents/code/anaphora-1.0",
+				"bootpath" : "~/Documents/code/anaphora1",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrns.record.maxpat",
-				"bootpath" : "~/Documents/code/anaphora-1.0",
+				"bootpath" : "~/Documents/code/anaphora1",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrns.grid.value.maxpat",
-				"bootpath" : "~/Documents/code/anaphora-1.0",
+				"bootpath" : "~/Documents/code/anaphora1",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrns.grid.toggle.maxpat",
-				"bootpath" : "~/Documents/code/anaphora-1.0",
+				"bootpath" : "~/Documents/code/anaphora1",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrns.recordbutton.maxpat",
-				"bootpath" : "~/Documents/code/anaphora-1.0",
+				"bootpath" : "~/Documents/code/anaphora1",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrns.refresh.maxpat",
-				"bootpath" : "~/Documents/code/anaphora-1.0",
+				"bootpath" : "~/Documents/code/anaphora1",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrns.groovemlr.maxpat",
-				"bootpath" : "~/Documents/code/anaphora-1.0",
+				"bootpath" : "~/Documents/code/anaphora1",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrns.partylooper.maxpat",
-				"bootpath" : "~/Documents/code/anaphora-1.0",
+				"bootpath" : "~/Documents/code/anaphora1",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrns.onoff.maxpat",
-				"bootpath" : "~/Documents/code/anaphora-1.0",
+				"bootpath" : "~/Documents/code/anaphora1",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrns.init.maxpat",
-				"bootpath" : "~/Documents/code/anaphora-1.0",
+				"bootpath" : "~/Documents/code/anaphora1",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrns.grid.range.maxpat",
-				"bootpath" : "~/Documents/code/anaphora-1.0",
+				"bootpath" : "~/Documents/code/anaphora1",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
