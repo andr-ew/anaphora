@@ -95,6 +95,7 @@ var init = function() {
 
 		for(j in tracks[i]) {
 			tracks[i][j].draw(g);
+			output(i, j, tracks[i][j].v);
 		}
 	}
 	
