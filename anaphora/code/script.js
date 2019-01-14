@@ -26,7 +26,7 @@ var Track = function(n) {
 	var rowb = [];
 	for(var i = 0; i < 15; i++) rowb[i] = 0;
 	
-	
+	//this.n = n;
 	this.r = new Toggle(0, [0, n], [LO, HI], ALL);
 	this.m = new Toggle(0, [1, n], [0, HI], ALL);
 	this.p1 = new Toggle(0, [2, n], [0, LO, HI], ALL);
@@ -39,11 +39,22 @@ var Track = function(n) {
 	this.fade =  new Value(13, [[1,2,3,4,5,6,7,8,9,10,11,12,13,14], n + 4], [[0,0,0,0,0,0,0,0,0,0,0,0,0,0], HI], FADE);
 	this.fb = new Fader(12, [[0, 14], n + 4], [0, HI, LO], FB);
 	
+	var r = this.r;
 	var m = this.m;
+	//var n = this.n;
 	
+	/*
 	this.r.event = function(v) {
 		if(v == 0) m.v = 1;
 	}
+	
+	this.m.event = function(v) {
+		if(v == 0) {
+ 			r.v = 0;
+		}
+		r.draw(g);
+	}
+	*/
 	
 	this.p1.event = function(v, last) {
 		if(last == 2) {
@@ -55,6 +66,19 @@ var Track = function(n) {
 	}
 	
 	this.p2.event = this.p1.event;
+	
+	this.cut.look = function(x, y, z) {
+		if(page == this.pg || -1 == this.pg) {
+			if(y == this.p[1] && z == 1) {
+				for(var i = 0; i < this.p[0].length; i++) {
+					if(this.p[0][i] == x) {
+						output(n, "jump", x);
+						break;
+					}
+				}
+			}
+		}
+	}
 }
 
 g.event = function(x, y, z) {
@@ -81,6 +105,22 @@ var redraw = function() {
 			tracks[i][j].draw(g);
 		}
 	}
+}
+
+input["pos"] = function(n) {
+	if(page == CUT) {
+		tracks[n[0]].cut.v = n[1];
+		tracks[n[0]].cut.draw(g);
+		
+		//if(n[0] == 0)
+ 		g.refresh();
+	}
+}
+
+input["m"] = function(n) {
+	tracks[n[0]].m.v = n[1];
+	tracks[n[0]].m.draw(g);
+	g.refresh();
 }
 
 var init = function() {	

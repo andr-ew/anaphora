@@ -85,7 +85,7 @@ Value.prototype.look = function(x, y, z) {
 		if(this.p[0].length) {
 			if(y == this.p[1]) {
 				for(var i = 0; i < this.p[0].length; i++) {
-					if(this.p[0][i] == x) {
+					if(this.p[0][i] == x && z == 1) {
 						var v = x - this.p[0][0]
 						this.event(v);
 						this.v = v;
@@ -138,6 +138,30 @@ Fader.prototype.draw = function(g) {
 			for(var i = 0; i < this.p[1].length; i++) {
 				if(i < this.v) this.b[0][i] = this.b[2];
 				else this.b[0][i] = this.bb;
+			}
+		}
+		Value.prototype.draw.call(this, g);
+	}
+	
+}
+
+var Crossfader = function(v, p, b, pg) {
+	Fader.call(this, v, p, b, pg);
+}
+
+Crossfader.prototype = Object.create(Fader.prototype);
+
+Crossfader.prototype.draw = function(g) {
+	if(page == this.pg || -1 == this.pg) {
+		if(this.p[0].length) {
+			for(var i = 0; i < this.p[0].length; i++) {
+				if(i < this.v) this.b[0][i] = this.b[2];//-----------------
+				else this.b[0][i] = this.bb;
+			}
+		}
+		else {
+			for(var i = 0; i < this.p[1].length; i++) {
+				
 			}
 		}
 		Value.prototype.draw.call(this, g);
