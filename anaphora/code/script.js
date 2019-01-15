@@ -11,11 +11,12 @@ var LO = 7;
 var HI = 11;
 
 var pages;
+var patterns = [];
 
 var ALL = -1;
 var CUT = 0;
 var LVL = 1;
-var FADE = 2;
+var PAN = 2;
 var FB = 3;
 
 var tracks = [];
@@ -36,36 +37,8 @@ var Track = function(n) {
 	this.b = new Value(n, [[11, 12, 13, 14], n], [[0, 0, 0, 0], HI], ALL);
 	this.cut = new Value(-1, [[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14], n + 4], [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], HI], CUT);
 	this.lvl = new Fader(12, [[0, 14], n + 4], [0, HI, LO], LVL);
-	this.fade =  new Value(13, [[1,2,3,4,5,6,7,8,9,10,11,12,13,14], n + 4], [[0,0,0,0,0,0,0,0,0,0,0,0,0,0], HI], FADE);
-	this.fb = new Fader(12, [[0, 14], n + 4], [0, HI, LO], FB);
-	
-	var r = this.r;
-	var m = this.m;
-	//var n = this.n;
-	
-	/*
-	this.r.event = function(v) {
-		if(v == 0) m.v = 1;
-	}
-	
-	this.m.event = function(v) {
-		if(v == 0) {
- 			r.v = 0;
-		}
-		r.draw(g);
-	}
-	*/
-	
-	this.p1.event = function(v, last) {
-		if(last == 2) {
-			this.v = 0;
-		}
-		else if(v == 0 && last == 1) {
-			this.v = 2;
-		}
-	}
-	
-	this.p2.event = this.p1.event;
+	this.pan =  new Crossfader(7, [[0, 14], n + 4], [0, HI, LO], PAN);
+	this.fb = new Fader(0, [[0, 12], n + 4], [0, HI, LO], FB);
 	
 	this.cut.look = function(x, y, z) {
 		if(page == this.pg || -1 == this.pg) {
@@ -81,28 +54,37 @@ var Track = function(n) {
 	}
 }
 
+var update = function(x, y, z) {
+	for(i in tracks[y % 4]) {
+		if(tracks[y % 4][i].look) tracks[y % 4][i].look(x, y, z);
+		if(tracks[y % 4][i].draw) tracks[y % 4][i].draw(g);
+		
+		output(y % 4, i, tracks[y % 4][i].v);
+	}
+	
+	g.refresh();
+}
+
 g.event = function(x, y, z) {
 	if(x < 15) {
-		for(i in tracks[y % 4]) {
-			tracks[y % 4][i].look(x, y, z);
-			tracks[y % 4][i].draw(g);
-			
-			output(y % 4, i, tracks[y % 4][i].v);
-		}
+		patterns[y % 4][0].look(x, y, z);
+		patterns[y % 4][1].look(x, y, z);
+		
+		update(x, y, z);
 	}
 	else {
 		pages.look(x, y, z);
 		pages.draw(g);
+		
+		g.refresh();
 	}
-
-	g.refresh();
 }
 
 var redraw = function() {
 	g.all(0);
 	for(var i = 0; i < tracks.length; i++) {
 		for(j in tracks[i]) {
-			tracks[i][j].draw(g);
+			if(tracks[i][j].draw) tracks[i][j].draw(g);
 		}
 	}
 }
@@ -134,9 +116,15 @@ var init = function() {
  		tracks[i] = new Track(i);
 
 		for(j in tracks[i]) {
-			tracks[i][j].draw(g);
-			output(i, j, tracks[i][j].v);
+			if(tracks[i][j].draw) {
+				tracks[i][j].draw(g);
+				output(i, j, tracks[i][j].v);
+			}
 		}
+		
+		patterns[i] = [];
+		patterns[i][0] = new Pattern(tracks[i].p1, update);
+		patterns[i][1] = new Pattern(tracks[i].p2, update);
 	}
 	
 	pages.draw(g);

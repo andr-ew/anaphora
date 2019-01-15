@@ -142,7 +142,6 @@ Fader.prototype.draw = function(g) {
 		}
 		Value.prototype.draw.call(this, g);
 	}
-	
 }
 
 var Crossfader = function(v, p, b, pg) {
@@ -155,16 +154,65 @@ Crossfader.prototype.draw = function(g) {
 	if(page == this.pg || -1 == this.pg) {
 		if(this.p[0].length) {
 			for(var i = 0; i < this.p[0].length; i++) {
-				if(i < this.v) this.b[0][i] = this.b[2];//-----------------
+				if((i > this.v && i <= Math.round(this.p[0].length - 1) / 2) || (i < this.v && i >= Math.round(this.p[0].length - 1) / 2)) this.b[0][i] = this.b[2];
 				else this.b[0][i] = this.bb;
 			}
 		}
 		else {
 			for(var i = 0; i < this.p[1].length; i++) {
-				
+				if((i > this.v && i <= this.p[0].length / 2) || (i < this.v && i >= this.p[0].length / 2)) this.b[0][i] = this.b[2];
+				else this.b[0][i] = this.bb;
 			}
 		}
 		Value.prototype.draw.call(this, g);
 	}
+}
+
+var Pattern = function(b, f) {
+	var time = 0;
+	var r = 0;
 	
+	var pattern = {}
+		
+	var task = new Task(function() {
+		if(time > 0) {
+			for(t in pattern) {
+				if((arguments.callee.task.iterations % time) == t) {
+					f.apply(null, pattern[t]);//---------------------
+				}
+			}
+		}
+	}, this);
+	task.interval = 1;
+	
+	var b = b;
+	
+	b.event = function(v, last) {
+		if(last == 2) {
+			this.v = 0;
+			
+			time = 0;
+			r = 0;
+			pattern = {}
+			task.cancel();
+		}
+		else if(v == 0 && last == 1) {
+			this.v = 2;
+			
+			time = task.iterations;
+			r = 0;
+			task.cancel();
+			task.repeat();
+		}
+		else if(v == 1 && last == 0) {
+			r = 1;
+			task.repeat();
+		}
+	}
+	
+	this.look = function() {
+		if(r && !(arguments[0] == b.p[0] && arguments[1] == b.p[1])) {
+			pattern[task.iterations] = arguments;
+		}
+	}
 }
