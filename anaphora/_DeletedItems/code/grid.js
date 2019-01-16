@@ -28,7 +28,11 @@ function disconnect() {
 function reconnect() {
 	if(monome_instance) monome_instance.reconnect();
 }
-
+/*
+function connect(n) {
+	if(monome_instance) monome_instance.connect(n);
+}
+*/
 function focus(i) {
 	if(monome_instance) monome_instance.focus(i);
 }
@@ -83,7 +87,7 @@ function Monome() {
 	this.autoconnect = 0;
 	this.connected = 0;
 	this.device = 0;
-	this.index = 0;
+	this.index = 1;
 	this.enabled = 1;
 	
 	this.device_size;
@@ -223,7 +227,12 @@ Monome.prototype.reconnect = function() {
 	outlet(0, "monome", 3, this.index);
 	this.onreconnect();
 }
-
+/*
+Monome.prototype.connect = function(n) {
+	outlet(0, "monome", 3, n);
+	this.onreconnect();
+}
+*/
 Monome.prototype.parse = function(n) {
 	if(this.event) this.event(n);
 }

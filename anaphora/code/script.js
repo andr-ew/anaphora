@@ -108,8 +108,19 @@ input["m"] = function(n) {
 	g.refresh();
 }
 
+input["thistrack"] = function(n) {
+	livetrack.v = n;
+	livetrack.draw(g);
+	g.refresh();
+}
+
 var init = function() {	
 	livetrack = new Value(-1, [15, [0, 1, 2, 3]], [[LO, LO, LO, LO], HI], ALL);
+	livetrack.event = function(v, last) {
+		output("settrack", v);
+		
+		this.v = last;
+	}
 	
 	pages = new Value(0, [15, [4, 5, 6, 7]], [[0, 0, 0, 0], HI], ALL);
 	pages.event = function(v) {

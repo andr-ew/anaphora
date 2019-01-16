@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 841.0, 177.0, 341.0, 349.0 ],
+		"rect" : [ 560.0, 99.0, 341.0, 349.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -358,8 +358,8 @@
 			}
 , 			{
 				"name" : "script.js",
-				"bootpath" : "~/Documents/code/anaphora/anaphora/patchers",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/code/anaphora/anaphora/code",
+				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -394,11 +394,11 @@
 				"name" : "a.ke",
 				"default" : 				{
 					"selectioncolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
-					"fontname" : [ "Andale Mono" ],
 					"patchlinecolor" : [ 0.960784, 0.827451, 0.156863, 0.9 ],
+					"fontname" : [ "Andale Mono" ],
+					"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"fontface" : [ 0 ],
-					"bgcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
-					"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+					"bgcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -407,10 +407,8 @@
 , 			{
 				"name" : "irv",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
 					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
-					"fontname" : [ "Arial Bold" ],
+					"fontsize" : [ 10.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -422,10 +420,12 @@
 						"autogradient" : 0
 					}
 ,
-					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"editing_bgcolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
+					"fontname" : [ "Arial Bold" ],
 					"accentcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
-					"locked_bgcolor" : [ 0.96078431372549, 0.96078431372549, 0.96078431372549, 1.0 ]
+					"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
+					"locked_bgcolor" : [ 0.96078431372549, 0.96078431372549, 0.96078431372549, 1.0 ],
+					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -434,10 +434,8 @@
 , 			{
 				"name" : "irv-1",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
 					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
-					"fontname" : [ "Arial Bold" ],
+					"fontsize" : [ 10.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -449,10 +447,12 @@
 						"autogradient" : 0
 					}
 ,
-					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"editing_bgcolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
+					"fontname" : [ "Arial Bold" ],
 					"accentcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
-					"locked_bgcolor" : [ 0.96078431372549, 0.96078431372549, 0.96078431372549, 1.0 ]
+					"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
+					"locked_bgcolor" : [ 0.96078431372549, 0.96078431372549, 0.96078431372549, 1.0 ],
+					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -461,10 +461,8 @@
 , 			{
 				"name" : "irv-2",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
 					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
-					"fontname" : [ "Arial Bold" ],
+					"fontsize" : [ 10.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -476,10 +474,12 @@
 						"autogradient" : 0
 					}
 ,
-					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"editing_bgcolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
+					"fontname" : [ "Arial Bold" ],
 					"accentcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
-					"locked_bgcolor" : [ 0.96078431372549, 0.96078431372549, 0.96078431372549, 1.0 ]
+					"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
+					"locked_bgcolor" : [ 0.96078431372549, 0.96078431372549, 0.96078431372549, 1.0 ],
+					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -488,10 +488,8 @@
 , 			{
 				"name" : "irv-4",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
 					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
-					"fontname" : [ "Arial Bold" ],
+					"fontsize" : [ 10.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -503,10 +501,12 @@
 						"autogradient" : 0
 					}
 ,
-					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"editing_bgcolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
+					"fontname" : [ "Arial Bold" ],
 					"accentcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
-					"locked_bgcolor" : [ 0.96078431372549, 0.96078431372549, 0.96078431372549, 1.0 ]
+					"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
+					"locked_bgcolor" : [ 0.96078431372549, 0.96078431372549, 0.96078431372549, 1.0 ],
+					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

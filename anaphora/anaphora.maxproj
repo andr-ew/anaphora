@@ -2,9 +2,9 @@
 	"name" : "anaphora",
 	"version" : 1,
 	"creationdate" : 3629787824,
-	"modificationdate" : 3630425392,
-	"viewrect" : [ 141.0, 84.0, 300.0, 500.0 ],
-	"autoorganize" : 0,
+	"modificationdate" : 3630436590,
+	"viewrect" : [ 67.0, 166.0, 300.0, 500.0 ],
+	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
 	"autolocalize" : 1,
@@ -21,12 +21,22 @@
 				"local" : 1
 			}
 ,
+			"track.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"anaphora.amxd" : 			{
 				"kind" : "maxforlive",
 				"local" : 1
 			}
 ,
 			"grid-js-live.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"M4L.api.SetSelectedTrackIndex.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
