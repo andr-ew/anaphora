@@ -2,12 +2,12 @@
 	"name" : "anaphora",
 	"version" : 1,
 	"creationdate" : 3629787824,
-	"modificationdate" : 3630170257,
-	"viewrect" : [ 25.0, 70.0, 300.0, 500.0 ],
-	"autoorganize" : 1,
+	"modificationdate" : 3630425392,
+	"viewrect" : [ 141.0, 84.0, 300.0, 500.0 ],
+	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
-	"autolocalize" : 0,
+	"autolocalize" : 1,
 	"contents" : 	{
 		"patchers" : 		{
 			"anaphora-standalone.maxpat" : 			{
@@ -21,12 +21,12 @@
 				"local" : 1
 			}
 ,
-			"grid-js-live.maxpat" : 			{
-				"kind" : "patcher",
+			"anaphora.amxd" : 			{
+				"kind" : "maxforlive",
 				"local" : 1
 			}
 ,
-			"channel-m4l.maxpat" : 			{
+			"grid-js-live.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

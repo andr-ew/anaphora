@@ -4,12 +4,12 @@ outlets = 1;
 include("grid.js");
 include("andrew.js");
 
-
 var g = grid.connect();
 
 var LO = 7;
 var HI = 11;
 
+var livetrack;
 var pages;
 var patterns = [];
 
@@ -76,6 +76,9 @@ g.event = function(x, y, z) {
 		pages.look(x, y, z);
 		pages.draw(g);
 		
+		livetrack.look(x, y, z);
+		livetrack.draw(g)
+		
 		g.refresh();
 	}
 }
@@ -106,6 +109,8 @@ input["m"] = function(n) {
 }
 
 var init = function() {	
+	livetrack = new Value(-1, [15, [0, 1, 2, 3]], [[LO, LO, LO, LO], HI], ALL);
+	
 	pages = new Value(0, [15, [4, 5, 6, 7]], [[0, 0, 0, 0], HI], ALL);
 	pages.event = function(v) {
 		page = v;
@@ -127,6 +132,7 @@ var init = function() {
 		patterns[i][1] = new Pattern(tracks[i].p2, update);
 	}
 	
+	livetrack.draw(g);
 	pages.draw(g);
 	
 	g.refresh();
