@@ -4,7 +4,7 @@ playable varispeed delay/looper in max for live. a variation on mlr for grids. r
 
 ![pic](anaphora_pic.png)
 
-a sort-of-polished-up version of of a [norns mlr](https://llllllll.co/t/mlr-norns/21145/175)-inspired delay/looper I've been using quite a bit for the last year. excels at expressive glitchy improv stuff. largely untested, plz post issues if (when) they arise. don't foresee a lot of future updates to this, since I'm mainly focused on building some new less glitchy ideas and ports in max with the soon-to-be-completed `softcut~`.
+a sort-of-polished-up version of of a [norns mlr](https://llllllll.co/t/mlr-norns/21145/175)-inspired delay/looper. excels at expressive glitchy improv stuff.
 
 differences from norns mlr include:
 
