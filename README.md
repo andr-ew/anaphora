@@ -14,9 +14,9 @@ differences from norns mlr include:
 
 ### Requirements
 
-![Ableton Live](https://www.ableton.com/en/live/)
-![Max for Live](https://www.ableton.com/en/live/max-for-live/)
-128 grid (varibright or 2011)
+[Ableton Live](https://www.ableton.com/en/live/)
+[Max for Live](https://www.ableton.com/en/live/max-for-live/)
+[128 grid (varibright or 2011)](https://monome.org/)
 
 ![docs](anaphora_docs.png)
 
@@ -32,4 +32,4 @@ differences from norns mlr include:
 
 explore ~
 
-![download](https://github.com/AndrewShike/anaphora/archive/master.zip)
+[download](https://github.com/AndrewShike/anaphora/archive/master.zip)
