@@ -18,7 +18,7 @@ differences from norns mlr include:
 
 [Max for Live](https://www.ableton.com/en/live/max-for-live/)
 
-[128 grid (varibright or 2011)](https://monome.org/)
+[128 or 64 grid(https://monome.org/)
 
 ![docs](anaphora_docs.png)
 
