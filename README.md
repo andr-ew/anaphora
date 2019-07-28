@@ -1,6 +1,7 @@
 # anaphora
 
-playable varispeed delay/looper in max for live. a variation on mlr for grids. rough around the edges.
+live-input focused mlr variant. rough around the edges.
+
 
 ![pic](anaphora_pic.png)
 
