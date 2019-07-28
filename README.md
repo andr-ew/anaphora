@@ -1,6 +1,6 @@
 # anaphora
 
-live-input focused mlr variant. rough around the edges.
+live-input focused mlr variant for 64 & 128 grids. rough around the edges.
 
 
 ![pic](anaphora_pic.png)
